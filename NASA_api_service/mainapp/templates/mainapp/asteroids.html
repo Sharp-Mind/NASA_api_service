@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form action="{% url 'asteroids_works' %}" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <!-- <label for="your_name">Your name: </label>
+        <input id="your_name" type="text" name="your_name" value="{{ current_name }}"> -->
+        <input type="submit" value="Get objects">
+    </form>
+
+    {% if asteroids_groups_list %}
+        {{ dates }}
+
+        <p>asteroids list</p> 
+
+        {% for asteroids_group in asteroids_groups_list.items %}
+            <!-- {% for date in dates %} -->
+                {{ asteroids_group }}
+                {% for asteroids in asteroids_group %}
+                    <p>asteroids</p>
+                    {{ asteroids }}
+                {% endfor %}
+
+            <!-- {% endfor %} -->
+        
+            <!-- {% for asteroid in asteroids_group %}
+            {{ asteroid.links.is_potentially_hazardous_asteroid }}
+                <tr>
+                    <p>{{ asteroid.is_potentially_hazardous_asteroid }}</p>
+                </tr>
+            {% endfor %} -->
+
+        {% endfor %}
+    {% else %}
+        <p></p>
+    {% endif %}
+    
+</body>
+</html>

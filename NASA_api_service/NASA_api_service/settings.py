@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 from pathlib import Path
-
+import NASA_api_service.auth_key as auth_key
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -24,6 +24,12 @@ SECRET_KEY = 'django-insecure-w&vh^&12om28pui+qdpdpgg@ei^ix!i4^+a4c608w9wzjullf6
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+API_KEY = auth_key.API_KEY
+
+# if DEBUG:
+#     API_KEY = 'DEMO_KEY'
+# else:
+#     API_KEY = auth_key.API_KEY
 
 ALLOWED_HOSTS = []
 

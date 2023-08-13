@@ -20,6 +20,6 @@ urlpatterns = [
     # ),
 
     path ('', views.index_page, name='index_page'),
-    path ('asteroid_request_form.html', views.asteroid_request_form, name='asteroid_request_form'),
-    path ('get_asteroids.html', views.get_asteroids, name='get_asteroids'),
+    path ('asteroids.html', views.asteroids_works, name='asteroids_works'),
+    # path ('get_asteroids.html', views.get_asteroids, name='get_asteroids'),
 ]
