@@ -1,9 +1,11 @@
 # NASA_api_service
 
-En [en_lang](#en_lang)
-Ru [ru_lang](#ru_lang)
+### Language/Язык
+- [English](#en_lang)
+- [Русский](#ru_lang)
+  
 
-## <a name="en_lang"></a> Installation:
+## <a name="en_lang"></a> Installation (EN)
 
 1. Copy the repository to your computer
 2. Create a new virtual environment next to the repository folder with the command
@@ -24,7 +26,7 @@ Ru [ru_lang](#ru_lang)
 
 When you navigate to ```localhost:8000```, the page will display a data entry form for the request. The fields "Start date" and "Count of objects" are mandatory. After clicking on the "Get objects" button, a request will be made to the NASA server to display information on request. The result of the execution will be the appearance of a table with the requested data under the query form.
 
-## <a name="ru_lang"></a> Установка:
+## <a name="ru_lang"></a> Установка (RU)
 
 1. Скопировать репозиторий на свой компьютер
 2. Создать новое виртуальное окружение рядом с папкой репозитория командой
