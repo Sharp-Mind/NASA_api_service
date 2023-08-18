@@ -34,7 +34,9 @@ When you navigate to ```localhost:8000```, the page will display a data entry fo
    python3 -m venv venv
    ```
 3. Активировать витруальное окружение командой
+   ```
    source venv/bin/activate
+   ```
 4. Перейтив папку проекта, из папки проекта выполнить:
    ```
    pip3 -r requirements.txt
