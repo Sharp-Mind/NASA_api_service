@@ -1,17 +1,58 @@
 <!DOCTYPE html>
+
+{% load static %}
+
 <html lang="en">
-<head>
+<head>  
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <title>Asteroids</title>
 </head>
 <body>
-    <form action="{ url 'print_name'}" method="post">
+    <p>{{ static }}</p>
+    <form action="{% url 'asteroids_works' %}" method="post">
         {% csrf_token %}
-        {{ form }}
-        <!-- <label for="your_name">Your name: </label>
-        <input id="your_name" type="text" name="your_name" value="{{ current_name }}"> -->
-        <input type="submit" value="OK">
-    </form>
+        {{ form.as_p }}     
+        <input type="submit" value="Get objects">
+    </form>   
+
+
+
+    {% if asteroids %}
+        {{ dates }}
+
+        <p>asteroids list</p> 
+      
+        <table>
+            <tr>
+                <th>Date</th>
+                <th >Name</th>
+                <th>Absolute Magnitude (hours)</th>
+                <th>Is potentially hazardous asteroid</th>
+            </tr>
+            {% for asteroid in asteroids %}
+                <tr>
+                    <td>
+                        {{ asteroid.date }}
+                    </td>
+                    <td>
+                        {{ asteroid.name }}
+                    </td>
+                    <td>
+                        {{ asteroid.absolute_magnitude_h }}
+                    </td>
+                    <td>
+                        {{ asteroid.is_hazardous }}
+                    </td>
+                </tr>
+                {% endfor %}
+        </table>
+            
+
+    {% else %}
+        <p></p>
+    {% endif %}
+    
 </body>
 </html>
