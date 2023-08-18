@@ -22,7 +22,7 @@
     ```
     python3 manage.py runserver
     ```
-## Usage:
+## Usage
 
 When you navigate to ```localhost:8000```, the page will display a data entry form for the request. The fields "Start date" and "Count of objects" are mandatory. After clicking on the "Get objects" button, a request will be made to the NASA server to display information on request. The result of the execution will be the appearance of a table with the requested data under the query form.
 
@@ -45,7 +45,7 @@ When you navigate to ```localhost:8000```, the page will display a data entry fo
    ```
    python3 manage.py runserver
    ```
-## Использование:
+## Использование
 
 При переходе по адресу ```localhost:8000``` на странице будет отображена форма ввода данных для запроса. Поля "Start date" и "Count of objects" обязательны к заполнению. После нажания на кнопку "Get objects" будет выполнен запрос к серверу NASA для вывода информации по запросу. Результатом выполнения станет появление под формой запроса таблицы с запрошенными данными.
 
